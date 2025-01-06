@@ -4,7 +4,7 @@
 #' @format A data frame with columns:
 #' \describe{
 #'  \item{cancer_type}{TCGA cancer types.}
-#'  \item{methulation_status}{Level of tumor/normal methylation.}
+#'  \item{methylation_status}{Level of tumor/normal methylation.}
 #'  \item{entrez_id}{Gene Entrez ID.}
 #' }
 #' @examples

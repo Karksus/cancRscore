@@ -5,6 +5,7 @@
 #' @returns A data frame.
 #' @examples
 #' nocgc_genes(10, 0.5)
+#' @import dplyr
 #' @export
 nocgc_genes <- function(top = 10, threshold = 0.5) {
 
@@ -13,12 +14,6 @@ nocgc_genes <- function(top = 10, threshold = 0.5) {
   }
   cancRscore_dataset <- get("cancRscore", envir = asNamespace("cancRscore"))
 
-  if(not_cgc){
-    cgc_status = "false"
-  }
-  else{
-    cgc_status = "true"
-  }
   filtered_genes <- cancRscore %>%
     dplyr::filter(cosmic_cgc_status == "false") %>%
     dplyr::filter(s1 >= threshold) %>%
